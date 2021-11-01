@@ -23,8 +23,7 @@ namespace MintaZH
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseLazyLoadingProxies()
-                              .UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDb
-                                Filename=|DataDirectory|\FoodReciepts.mdf;Integrated Security=True");
+                              .UseSqlServer(@"Server=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\FoodReciepts.mdf; Trusted_Connection = True");
             }
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

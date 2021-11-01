@@ -20,7 +20,7 @@ namespace MintaZH
         public static Refigerator LoadXml(string path)
         {
             XDocument doc = XDocument.Load(path);
-            XElement fridgeXml = doc.Element("refigerator");
+            XElement fridgeXml = doc.Element("refrigerator");
 
             var products = from productNode in fridgeXml.Descendants("product")
                            select new Product()

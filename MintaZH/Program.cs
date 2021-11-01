@@ -12,7 +12,7 @@ namespace MintaZH
             AttributeHelper helper = new AttributeHelper();
             
             // a. feladat
-            Console.WriteLine($"Number of Receipts: {context.Receipts.Count()}");
+            Console.WriteLine($"Number of Receipts: {context.Receipts.Count()}\n");
 
             // b. feladat
             Console.WriteLine("Seductive receipts:");
@@ -32,7 +32,7 @@ namespace MintaZH
             }
 
             // c. feladat
-            Console.WriteLine("Receipts that need Oil:");
+            Console.WriteLine("\nReceipts that need Oil:");
             foreach (Receipts receipt in 
                 context.Receipts.Where(x => x.Ingredients.Any(y => y.Name.ToLower() == "olaj"))
                 .OrderByDescending(x => x.Price))
@@ -41,7 +41,7 @@ namespace MintaZH
             }
 
             // d. feladat
-            Console.WriteLine("Needed amount if we were to make every receipt:");
+            Console.WriteLine("\nNeeded amount if we were to make every receipt:");
             foreach (var ingredient in 
                 context.Receipts
                        .SelectMany(x => x.Ingredients)
@@ -53,7 +53,7 @@ namespace MintaZH
             }
 
             // e. feladat
-            Console.WriteLine("Products in the refigerator:");
+            Console.WriteLine("\nProducts in the refigerator:");
             foreach (Product product in frigo.Products)
             {
                 Console.Write($"{helper.GetPropertyDisplayName<Product>(nameof(product.Name))}: {product.Name}");
