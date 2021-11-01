@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MintaZH", "MintaZH\MintaZH.csproj", "{2FDE2DE7-8C96-4A09-8DC0-CC22D3F458CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MintaZH.Tests", "MintaZH.Tests\MintaZH.Tests.csproj", "{0D24187A-5670-4369-B5D7-1E8AB8055D57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2FDE2DE7-8C96-4A09-8DC0-CC22D3F458CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FDE2DE7-8C96-4A09-8DC0-CC22D3F458CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FDE2DE7-8C96-4A09-8DC0-CC22D3F458CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FDE2DE7-8C96-4A09-8DC0-CC22D3F458CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D24187A-5670-4369-B5D7-1E8AB8055D57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D24187A-5670-4369-B5D7-1E8AB8055D57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D24187A-5670-4369-B5D7-1E8AB8055D57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D24187A-5670-4369-B5D7-1E8AB8055D57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {559E034B-DA7F-4159-92B2-C18D92BCE4BD}
+	EndGlobalSection
+EndGlobal
