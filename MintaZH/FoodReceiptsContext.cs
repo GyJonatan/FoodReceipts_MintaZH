@@ -7,6 +7,16 @@ using System.Threading.Tasks;
 
 namespace MintaZH
 {
+
+    /*
+     Ahhoz, hogy érdemben foglalkozni tudjunk az adatbázissal telepítenünk kell a
+
+                - Microsoft.EntityFrameworkCore.Proxies
+                - Microsoft.EntityFrameworkCore.SqlServer
+                - Microsoft.EntityFrameworkCore.Tools
+     
+     csomagokat.
+     */
     class FoodReceiptsContext : DbContext
     {
         public DbSet<Ingredients> Ingredients { get;  set; }
@@ -17,7 +27,11 @@ namespace MintaZH
             this.Database.EnsureCreated();
         }
 
-        
+        /*
+        c) Állítsa be a szükséges paramétereket az adatbázis kapcsolathoz, és a táblák 
+           között is definiálja a külsőkulcs függőségeket. 
+           Adjon lehetőséget a LazyLoad módszer alkalmazására. (4 pont) 
+        */
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -26,6 +40,10 @@ namespace MintaZH
                               .UseSqlServer(@"Server=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\FoodReciepts.mdf; Trusted_Connection = True");
             }
         }
+        /*
+            d) Töltse fel teszt adatokkal a mellékelt segédlet alapján a táblákat, 
+               a félév során tanult alapértelmezett adatok beviteli módjával! (1 pont)
+        */
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Ingredients>(entity =>
